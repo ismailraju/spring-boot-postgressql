@@ -21,6 +21,11 @@ public class FcsfpLedger {
     @Column(name = "executioninstance_id")
     private Integer executionInstanceId;
 
+    public FcsfpLedger(Object[] o) {
+        ledgerId= Integer.valueOf(o[0]+"") ;
+        executionInstanceId=Integer.valueOf(o[1]+"") ;
+    }
+
     @Override
     public String toString() {
         return "FCSFPLedger{" +
@@ -28,6 +33,7 @@ public class FcsfpLedger {
                 ", executionInstanceId=" + executionInstanceId +
                 '}';
     }
+    
 }
 
 
